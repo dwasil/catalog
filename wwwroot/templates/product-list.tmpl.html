@@ -1,0 +1,76 @@
+<div class="blade-frame {{$ctrl.isHiddenClass}}" style="z-index: 90;">
+
+    <div class="loader-container" ng-if="!$ctrl.dataReady">
+        <div class="loader"></div>  
+    </div>  
+    
+    <div class="blade-frame-container">
+        <div class="blade-frame-head">                
+            <div class="blade-frame-head-top">
+                <span class="blade-frame-head-title">
+                    {{$ctrl.data.categoryName}}&nbsp;                
+                </span>
+                <span class="blade-frame-head-close">
+                    <img src="images/cancel.png" ng-click="$ctrl.hide()" title="Закрыть">
+                </span>
+            </div>
+                <div class="blade-frame-head-bottom">
+                    <span class="blade-frame-head-button" ng-click="$ctrl.addProduct()" title="Добавить товар">
+                        <div class="blade-frame-head-button-image">
+                            <img src="images/plus-black-symbol.png">
+                        </div>
+                        <div>Добавить</div>
+                    </span>
+                    <span class="blade-frame-head-button{{!$ctrl.hasChecked ? ' disabled' : ''}}" ng-click="$ctrl.deleteProducts()" title="Удалить товар">
+                        <div class="blade-frame-head-button-image">
+                            <img src="images/trash.png">
+                        </div>
+                        <div>Удалить</div>
+                    </span>                                        
+                </div>
+            </div>              
+        <div class="blade-frame-content">
+            <div class="blade-frame-navi">
+                <div class="blade-frame-navi-pages" ng-hide="($ctrl.getNumOfPages() <= 1)">
+                    <div>
+                        <span>
+                            <span><a class="blade-frame-navi-item" href="#">First</a></span>
+                            <span><a class="blade-frame-navi-item" href="#">Prev</a></span>
+                        </span>
+                        <span><a class="blade-frame-navi-item" href="#">1</a></span>
+                        <span><a class="blade-frame-navi-item" href="#">2</a></span>
+                        <span><a class="blade-frame-navi-item" href="#">3</a></span>
+                        <span><a class="blade-frame-navi-item" href="#">4</a></span>
+                        <span><a class="blade-frame-navi-item" href="#">5</a></span>
+                        <span>
+                            <span><a class="blade-frame-navi-item" href="#">Next</a></span>
+                            <span><a class="blade-frame-navi-item" href="#">Last</a></span>
+                      </span>
+                    </div>
+                </div>
+            </div>
+            <div class="blade-frame-content-list">
+                <table width="100%" style="border-spacing: 0; ">
+                    <tr>
+                        <th>&nbsp;</th>
+                        <th>Фото</th>
+                        <th>Товар</th>
+                        <th>Цена</th>
+                        <th><nobr>Кол-во</nobr></th>
+                    </tr>
+                    <tr ng-repeat="product in $ctrl.data.list" ng-click="$ctrl.onProductSelect($index, product.id)" ng-class="($ctrl.selectedIndex == $index ? 'selected' : '')">
+                        <td><input type="checkbox" class="blade-frame-content-list-cb" ng-model="product.checked" ng-click="$event.stopPropagation();" ng-change="$ctrl.setHasChecked();"></td>
+                        <td>
+                            <div class="blade-frame-content-list-img-cont">
+                                <img class="blade-frame-content-list-img" src="{{product.picture}}">
+                            </div>
+                        </td>
+                        <td>{{product.name}}</td>
+                        <td>{{product.price}}</td>
+                        <td>{{product.quantity}}</td>                    
+                    </tr>   
+                </table>
+            </div>
+        </div>               
+    </div>    
+</div>

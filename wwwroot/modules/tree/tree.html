@@ -1,0 +1,21 @@
+<script type="text/ng-template" id="categoryTree">
+    <span 
+        ng-if="(node.subCategories.length > 0)"        
+        class="bullet plus"                 
+        ng-click="$ctrl.onToggleNode($event, node.id)"
+    ></span>
+    <span ng-click="$ctrl.onClickNode($event, node.id)" class="node-name">{{node.name}}</span>
+    <ul ng-if="(node.subCategories.length > 0)" class="children-hidden" id="children-{{node.id}}">
+        <li                         
+            ng-repeat="node in node.subCategories"             
+            ng-include="'categoryTree'"
+        ></li>  
+    </ul>
+</script>
+
+<ul class="tree">
+    <li                         
+        ng-repeat="node in $ctrl.getData()" 
+        ng-include="'categoryTree'"
+        ></li>
+</ul>   

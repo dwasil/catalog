@@ -1,0 +1,29 @@
+{    
+    "categoryId": 5,
+    "categoryName": "Туфли",
+    "currentPage": 1,
+    "totalPages": 100,    
+    "list": [    
+        {"id": 1, "picture":"images/shoes.jpg", "name":"Туфли женские", "price": 34.50, "quantity":5},
+        {"id": 2, "picture":"images/shoes.jpg", "name":"Туфли женские", "price": 34.50, "quantity":5},
+        {"id": 3, "picture":"images/shoes.jpg", "name":"Туфли женские", "price": 34.50, "quantity":5},
+        {"id": 4, "picture":"images/shoes.jpg", "name":"Туфли женские очень длинное название товара которое не должно уместиться в отведенное место", "price": 3400000.50, "quantity":5000},
+        {"id": 1, "picture":"images/shoes.jpg", "name":"Туфли женские", "price": 34.50, "quantity":5},
+        {"id": 2, "picture":"images/shoes.jpg", "name":"Туфли женские", "price": 34.50, "quantity":5},
+        {"id": 3, "picture":"images/shoes.jpg", "name":"Туфли женские", "price": 34.50, "quantity":5},
+        {"id": 4, "picture":"images/shoes.jpg", "name":"Туфли женские очень длинное название товара которое не должно уместиться в отведенное место", "price": 3400000.50, "quantity":5000},
+        {"id": 1, "picture":"images/shoes.jpg", "name":"Туфли женские", "price": 34.50, "quantity":5},
+        {"id": 2, "picture":"images/shoes.jpg", "name":"Туфли женские", "price": 34.50, "quantity":5},
+        {"id": 3, "picture":"images/shoes.jpg", "name":"Туфли женские", "price": 34.50, "quantity":5},
+        {"id": 4, "picture":"images/shoes.jpg", "name":"Туфли женские очень длинное название товара которое не должно уместиться в отведенное место", "price": 3400000.50, "quantity":5000},
+        {"id": 1, "picture":"images/shoes.jpg", "name":"Туфли женские", "price": 34.50, "quantity":5},
+        {"id": 2, "picture":"images/shoes.jpg", "name":"Туфли женские", "price": 34.50, "quantity":5},
+        {"id": 3, "picture":"images/shoes.jpg", "name":"Туфли женские", "price": 34.50, "quantity":5},
+        {"id": 4, "picture":"images/shoes.jpg", "name":"Туфли женские очень длинное название товара которое не должно уместиться в отведенное место", "price": 3400000.50, "quantity":5000},
+        {"id": 1, "picture":"images/shoes.jpg", "name":"Туфли женские", "price": 34.50, "quantity":5},
+        {"id": 2, "picture":"images/shoes.jpg", "name":"Туфли женские", "price": 34.50, "quantity":5},
+        {"id": 3, "picture":"images/shoes.jpg", "name":"Туфли женские", "price": 34.50, "quantity":5},
+        {"id": 4, "picture":"images/shoes.jpg", "name":"Туфли женские очень длинное название товара которое не должно уместиться в отведенное место", "price": 3400000.50, "quantity":5000},
+        {"id": 5, "picture":"images/shoes.jpg", "name":"ОдежТуфли женскиеда", "price": 34.50, "quantity":5}
+    ]
+}

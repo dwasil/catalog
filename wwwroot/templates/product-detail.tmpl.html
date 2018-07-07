@@ -1,0 +1,75 @@
+<div class="blade-frame {{$ctrl.isHiddenClass}}" style="z-index: 80;">
+
+    <div class="loader-container" ng-if="!$ctrl.dataReady">
+        <div class="loader"></div>  
+    </div>  
+
+    <div class="blade-frame-container">
+        <div class="blade-frame-head">                
+            <div class="blade-frame-head-top">
+                <span class="blade-frame-head-title">
+                    {{$ctrl.data.name}}&nbsp;
+                </span>
+                <span class="blade-frame-head-close">
+                    <img src="images/cancel.png" ng-click="$ctrl.hide()" title="Закрыть">
+                </span>
+            </div> 
+                <div class="blade-frame-head-bottom">
+                    <span class="blade-frame-head-button{{$ctrl.changed && $ctrl.valid ? '' : ' disabled'}}" title="Сохранить товар" ng-click="$ctrl.save()">
+                    <div class="blade-frame-head-button-image">
+                        <img src="images/floppy-disk.png" >
+                    </div>
+                    <div>Сохранить</div>
+                </span>
+                <span class="blade-frame-head-button{{!$ctrl.changed ? ' disabled' : ''}}" title="Отмена" ng-click="$ctrl.cancel()">
+                    <div class="blade-frame-head-button-image">
+                        <img src="images/cancel-big.png">
+                    </div>
+                    <div>Отменить</div>
+                </span>                                        
+            </div>
+        </div>              
+        <div class="blade-frame-content">                    
+            <div class="blade-frame-content-detail">
+                <form name="product-details">
+                    <table width="100%" style="padding:10px;">
+                        <tr>
+                            <td>Фото:</td>
+                            <td>
+                                <div class="blade-frame-content-detail-img-cont">
+                                    
+                                    <img class="blade-frame-content-detail-img" src="{{$ctrl.data.picture}}"/>
+                                </div>
+                                <div class="blade-frame-content-detail-img-ups">
+                                    <input id="product-image-detail" type="file" name="image" accept="image/*" onchange="angular.element(this).scope().setImageFiles(this.files)">
+                                </div>
+                                <div class="blade-frame-content-detail-promt" ng-class="($ctrl.data.picture.length > 0 ? ' hidden' : '')">Обязательно к заполнению</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Наименование:</td>
+                            <td>
+                                <div><input type="text" name="name" ng-model="$ctrl.data.name" ng-change="$ctrl.onChange()"></div>
+                                <div class="blade-frame-content-detail-promt" ng-class="($ctrl.isNameValid() ? ' hidden' : '')">Не менее трёх символов</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Цена:</td>
+                            <td>
+                                <div><input type="text" name="price" ng-model="$ctrl.data.price" ng-change="$ctrl.onChange()"></div>
+                                <div class="blade-frame-content-detail-promt" ng-class="($ctrl.isPriceValid() ? ' hidden' : '')">Число. Обязательно к заполнению</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Количество:</td>
+                            <td>
+                                <div><input type="text" name="quantity" ng-model="$ctrl.data.quantity" ng-change="$ctrl.onChange('quantity')"></div>
+                                <div class="blade-frame-content-detail-promt" ng-class="($ctrl.isQuantityValid()  ? ' hidden' : '')">Должно быть целое число</div>
+                            </td>
+                        </tr>                
+                    </table>
+                </form>
+            </div>
+        </div>                          
+    </div>
+</div>                
