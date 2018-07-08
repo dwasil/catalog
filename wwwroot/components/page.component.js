@@ -1,6 +1,5 @@
 angular.
   module('catalogApp')
-    .component('page', {
-      restrict: 'E',
+    .component('page', {     
       templateUrl: 'templates/page.tmpl.html'
     });

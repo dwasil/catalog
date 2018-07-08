@@ -29,74 +29,74 @@ namespace Catalog.Controllers
             if (_context.Products.Count() == 0)
             {
                 _context.Products.Add(
-                    new Product { Name = "Туфли женские", Picture = "images/shoes.jpg", Price = 34.5, Quantity = 9, CategoryId = 1 }
+                    new Product { Name = "Туфли", Picture = "images/shoes.jpg", Price = 34.5, Quantity = 9, CategoryId = 1 }
                 );
                  _context.Products.Add(
-                    new Product { Name = "Туфли женские", Picture = "images/shoes.jpg", Price = 34.5, Quantity = 9, CategoryId = 1 }
+                    new Product { Name = "Туфли", Picture = "images/shoes.jpg", Price = 34.5, Quantity = 9, CategoryId = 1 }
                 );
                  _context.Products.Add(
-                    new Product { Name = "Туфли женские", Picture = "images/shoes.jpg", Price = 34.5, Quantity = 9, CategoryId = 1 }
+                    new Product { Name = "Туфли женские", Picture = "images/shoes.jpg", Price = 34.5, Quantity = 9, CategoryId = 2 }
                 );
                  _context.Products.Add(
-                    new Product { Name = "Туфли женские", Picture = "images/shoes.jpg", Price = 34.5, Quantity = 9, CategoryId = 1 }
+                    new Product { Name = "Туфли женские", Picture = "images/shoes.jpg", Price = 34.5, Quantity = 9, CategoryId = 2 }
                 );
                  _context.Products.Add(
-                    new Product { Name = "Туфли женские", Picture = "images/shoes.jpg", Price = 34.5, Quantity = 9, CategoryId = 1 }
+                    new Product { Name = "Туфли женские", Picture = "images/shoes.jpg", Price = 34.5, Quantity = 9, CategoryId = 2 }
                 );
                  _context.Products.Add(
-                    new Product { Name = "Туфли женские", Picture = "images/shoes.jpg", Price = 34.5, Quantity = 9, CategoryId = 1 }
+                    new Product { Name = "Туфли женские", Picture = "images/shoes.jpg", Price = 34.5, Quantity = 9, CategoryId = 2 }
                 );
                  _context.Products.Add(
-                    new Product { Name = "Туфли женские", Picture = "images/shoes.jpg", Price = 34.5, Quantity = 9, CategoryId = 1 }
+                    new Product { Name = "Туфли женские", Picture = "images/shoes.jpg", Price = 34.5, Quantity = 9, CategoryId = 2 }
                 );
                  _context.Products.Add(
-                    new Product { Name = "Туфли женские", Picture = "images/shoes.jpg", Price = 34.5, Quantity = 9, CategoryId = 1 }
+                    new Product { Name = "Туфли женские", Picture = "images/shoes.jpg", Price = 34.5, Quantity = 9, CategoryId = 2 }
                 );
                  _context.Products.Add(
-                    new Product { Name = "Туфли женские", Picture = "images/shoes.jpg", Price = 34.5, Quantity = 9, CategoryId = 1 }
+                    new Product { Name = "Туфли женские", Picture = "images/shoes.jpg", Price = 34.5, Quantity = 9, CategoryId = 2 }
                 );
                  _context.Products.Add(
-                    new Product { Name = "Туфли женские", Picture = "images/shoes.jpg", Price = 34.5, Quantity = 9, CategoryId = 1 }
+                    new Product { Name = "Туфли женские", Picture = "images/shoes.jpg", Price = 34.5, Quantity = 9, CategoryId = 2 }
                 );
                  _context.Products.Add(
-                    new Product { Name = "Туфли женские", Picture = "images/shoes.jpg", Price = 34.5, Quantity = 9, CategoryId = 1 }
+                    new Product { Name = "Туфли женские", Picture = "images/shoes.jpg", Price = 34.5, Quantity = 9, CategoryId = 2 }
                 );
                  _context.Products.Add(
-                    new Product { Name = "Туфли женские", Picture = "images/shoes.jpg", Price = 34.5, Quantity = 9, CategoryId = 1 }
+                    new Product { Name = "Туфли женские", Picture = "images/shoes.jpg", Price = 34.5, Quantity = 9, CategoryId = 2 }
                 );
                  _context.Products.Add(
-                    new Product { Name = "Туфли женские", Picture = "images/shoes.jpg", Price = 34.5, Quantity = 9, CategoryId = 1 }
+                    new Product { Name = "Туфли женские", Picture = "images/shoes.jpg", Price = 34.5, Quantity = 9, CategoryId = 2 }
                 );
                 
                _context.Products.Add(
-                    new Product { Name = "Туфли мужские", Picture = "images/shoesf.jpg", Price = 34.5, Quantity = 9, CategoryId = 2 }
+                    new Product { Name = "Туфли", Picture = "images/shoesf.jpg", Price = 34.5, Quantity = 9, CategoryId = 1 }
                 );                
                _context.Products.Add(
-                    new Product { Name = "Туфли мужские", Picture = "images/shoesf.jpg", Price = 34.5, Quantity = 9, CategoryId = 2 }
+                    new Product { Name = "Туфли", Picture = "images/shoesf.jpg", Price = 34.5, Quantity = 9, CategoryId = 1 }
                 );                
                _context.Products.Add(
-                    new Product { Name = "Туфли мужские", Picture = "images/shoesf.jpg", Price = 34.5, Quantity = 9, CategoryId = 2 }
+                    new Product { Name = "Туфли мужские", Picture = "images/shoesf.jpg", Price = 34.5, Quantity = 9, CategoryId = 3 }
                 );                
                _context.Products.Add(
-                    new Product { Name = "Туфли мужские", Picture = "images/shoesf.jpg", Price = 34.5, Quantity = 9, CategoryId = 2 }
+                    new Product { Name = "Туфли мужские", Picture = "images/shoesf.jpg", Price = 34.5, Quantity = 9, CategoryId = 3 }
                 );                
                _context.Products.Add(
-                    new Product { Name = "Туфли мужские", Picture = "images/shoesf.jpg", Price = 34.5, Quantity = 9, CategoryId = 2 }
+                    new Product { Name = "Туфли мужские", Picture = "images/shoesf.jpg", Price = 34.5, Quantity = 9, CategoryId = 3 }
                 );                
                _context.Products.Add(
-                    new Product { Name = "Туфли мужские", Picture = "images/shoesf.jpg", Price = 34.5, Quantity = 9, CategoryId = 2 }
+                    new Product { Name = "Туфли мужские", Picture = "images/shoesf.jpg", Price = 34.5, Quantity = 9, CategoryId = 3 }
                 );                
                _context.Products.Add(
-                    new Product { Name = "Туфли мужские", Picture = "images/shoesf.jpg", Price = 34.5, Quantity = 9, CategoryId = 2 }
+                    new Product { Name = "Туфли мужские", Picture = "images/shoesf.jpg", Price = 34.5, Quantity = 9, CategoryId = 3 }
                 );                
                _context.Products.Add(
-                    new Product { Name = "Туфли мужские", Picture = "images/shoesf.jpg", Price = 34.5, Quantity = 9, CategoryId = 2 }
+                    new Product { Name = "Туфли мужские", Picture = "images/shoesf.jpg", Price = 34.5, Quantity = 9, CategoryId = 3 }
                 );                
                _context.Products.Add(
-                    new Product { Name = "Туфли мужские", Picture = "images/shoesf.jpg", Price = 34.5, Quantity = 9, CategoryId = 2 }
+                    new Product { Name = "Туфли мужские", Picture = "images/shoesf.jpg", Price = 34.5, Quantity = 9, CategoryId = 3 }
                 );                
                _context.Products.Add(
-                    new Product { Name = "Туфли мужские", Picture = "images/shoesf.jpg", Price = 34.5, Quantity = 9, CategoryId = 2 }
+                    new Product { Name = "Туфли мужские", Picture = "images/shoesf.jpg", Price = 34.5, Quantity = 9, CategoryId = 3 }
                 );                
                 _context.SaveChanges();
             }
@@ -118,15 +118,15 @@ namespace Catalog.Controllers
         }     
 
         [HttpGet("ByCategory2/{id}")]
-        public async Task<IActionResult> Index(int page = 1)
+        public async Task<IActionResult> Index(long id, int page = 1)
         {
-            int pageSize = 5;   // количество элементов на странице
+            int pageSize = 100;   // количество элементов на странице
              
             IQueryable<Product> source = from s in _context.Products
                                     select s;
 
             var count = source.Count();
-            var items = source.Skip((page - 1) * pageSize).Take(pageSize).ToList();
+            var items = source.Skip((page - 1) * pageSize).Take(pageSize).Where(s => s.CategoryId == id).ToList();
  
             PageData pageData = new PageData(count, page, pageSize);
             IndexData data = new IndexData
