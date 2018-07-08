@@ -1,6 +1,1 @@
-angular
-.module('bladeApp', [])
-
-.run(function(){
-    console.log("bladeApp");
-});
+angular.module('catalogApp', []);

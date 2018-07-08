@@ -1,5 +1,5 @@
 angular.
-  module('bladeApp')
+  module('catalogApp')
   .component('productDetail', {            
       templateUrl: 'templates/product-detail.tmpl.html',
       controller: function ProductDetailController($rootScope, $http, $timeout, $scope, $document) {  

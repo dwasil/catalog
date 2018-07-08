@@ -1,5 +1,5 @@
 angular.
-  module('bladeApp')
+  module('catalogApp')
   .component('productList', {            
       templateUrl: 'templates/product-list.tmpl.html',
       controller: function ProductListController($rootScope, $http, $timeout, $scope) {  
@@ -10,32 +10,12 @@ angular.
         this.selectedIndex = -1;
         this.hasChecked = false;
         this.dataReady = false;
-        this.categoryId = 0;
-        this.currentPage = 0;
-        this.pageSize = 0;
-        this.lastPage = 0;                
-        
-
-        this.getNextPage = function(){            
-            return this.currentPage < this.lastPage ? this.currentPage + 1 : 0; 
-        }
-
-        this.getPrevPage = function(){            
-            return this.currentPage > 1 ? this.currentPage - 1 : 0; 
-        }
-
-        this.getPagesList = function(){
-            return '';
-        }
+        this.categoryId = 0;  
 
         this.hide = function(){
             this.isHiddenClass = ' hidden';
             $rootScope.$emit('onProductListHide');
-        }
-
-        this.gotoPage = function(page){
-            
-        }
+        }      
 
         this.show = function(){
             this.isHiddenClass = '';
@@ -109,8 +89,6 @@ angular.
             }
 
             this.hasChecked = result;
-
-
         }
 
         this.getData = function(page)
@@ -124,20 +102,35 @@ angular.
 
             $http.get(url).then(
                 function(response) {
-                    //check data
-                    var data = angular.fromJson(response);
                     
-                    data.list = data.data.data.products;
+                    if(response.status == '200'){
+                        var data = angular.fromJson(response);
+                        
+                        if(data.data.data.products)
+                        {
+                            data.list = data.data.data.products;
 
-                    for(var i = data.list.length - 1; i >= 0; i--){
-                        data.list[i].checked = false;
-                        data.list[i].selected = false;
+                            for(var i = data.list.length - 1; i >= 0; i--){
+                                data.list[i].checked = false;
+                                data.list[i].selected = false;
+                            }
+                        }
+
+                        self.data = data;                        
+                        
+                        
+                        if(data.data.data.pageData)
+                        {                            
+                            $rootScope.$emit('onPaginationInfoRceived', data.data.data.pageData);
+                        }
                     }
-
-                    self.data = data;                                             
+                    else
+                    {
+                        alert('Ошибка получения данных');
+                    }
                 },
                 function(){
-                    alert('Ошибка получения данных')
+                    alert('Ошибка получения данных');
                 }
             );
         }
