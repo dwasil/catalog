@@ -38,6 +38,9 @@ angular.
         this.deleteProducts = function(){
             if(!this.hasChecked)
                 return;   
+            if(!confirm("Вы уверены, что хотите удалить товары?")){
+                return;
+            }
             
             var counter = 0;
 
