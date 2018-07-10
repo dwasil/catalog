@@ -218,7 +218,6 @@ angular.
             self.getData(productId);            
         });
 
-
         $rootScope.$on('onProductAdd', function(event, categoryId) {            
             self.saveIfNeedChangedData();             
             self.setEmptyData(categoryId);   

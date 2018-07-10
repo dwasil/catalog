@@ -120,13 +120,13 @@ namespace Catalog.Controllers
         [HttpGet("ByCategory2/{id}")]
         public async Task<IActionResult> Index(long id, int page = 1)
         {
-            int pageSize = 100;   // количество элементов на странице
+            int pageSize = 5;   // количество элементов на странице
              
             IQueryable<Product> source = from s in _context.Products
                                     select s;
 
             var count = source.Count();
-            var items = source.Skip((page - 1) * pageSize).Take(pageSize).Where(s => s.CategoryId == id).ToList();
+            var items = source.Skip((page - 1) * pageSize).Take(pageSize).ToList(); //Where(s => s.CategoryId == id).
  
             PageData pageData = new PageData(count, page, pageSize);
             IndexData data = new IndexData

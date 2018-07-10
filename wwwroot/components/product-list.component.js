@@ -11,6 +11,7 @@ angular.
         this.hasChecked = false;
         this.dataReady = false;
         this.categoryId = 0;  
+        this.page = 1;
 
         this.hide = function(){
             this.isHiddenClass = ' hidden';
@@ -94,13 +95,12 @@ angular.
             this.hasChecked = result;
         }
 
-        this.getData = function(page)
+        this.getData = function()
         {
             var url = 'api/product/bycategory2/'+this.categoryId;
 
-            if(page)
-            {
-                url += '?page='+page;
+            if(this.page > 1){
+                url += '?page='+this.page;
             }
 
             $http.get(url).then(
@@ -146,16 +146,21 @@ angular.
             $timeout(function(){ self.dataReady = true; }, 1000);        
         });
 
-        $rootScope.$on('onProductAdded', function(event) {
+        $rootScope.$on('onProductAdded', function($event) {
             self.getData();                     
         });
 
-        $rootScope.$on('onProductUpdated', function(event) {
+        $rootScope.$on('onProductUpdated', function($event) {
             self.getData();                     
         });
 
-        $rootScope.$on('onProductAddOpened', function(event) {
+        $rootScope.$on('onProductAddOpened', function($event) {
             self.selectedIndex = -1;                     
+        });
+
+        $rootScope.$on('onPageSelected', function($event, page) {
+            self.page = page;
+            self.getData();                     
         });
       }
   });
